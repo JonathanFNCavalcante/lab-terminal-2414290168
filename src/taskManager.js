@@ -32,3 +32,15 @@ export function filterTasks(tasks, status) {
   if (status === 'pending') return tasks.filter(t => !t.completed);
   return [...tasks];
 }
+
+export function countTasks(tasks) {
+  return tasks.length;
+}
+
+export function countCompleted(tasks) {
+  return tasks.filter(t => t.completed).length;
+}
+
+export function countPending(tasks) {
+  return tasks.filter(t => !t.completed).length;
+}
