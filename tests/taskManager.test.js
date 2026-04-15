@@ -36,3 +36,17 @@ describe('filterTasks', () => {
     expect(result[0].id).toBe(1);
   });
 });
+
+describe('Contagens', () => {
+  const tasks = [
+    { completed: true },
+    { completed: true },
+    { completed: false }
+  ];
+  it('countTasks deve retornar o total', () => {
+    expect(countTasks(tasks)).toBe(3);
+  });
+  it('countCompleted deve retornar apenas concluídas', () => {
+    expect(countCompleted(tasks)).toBe(2);
+  });
+});
